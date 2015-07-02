@@ -60,7 +60,7 @@ bool PreviewScene::init()
             _cg = 0;
         }
     };
-    schedule(cgfunc, 0.033f, kRepeatForever, 0.f, "dsfsdf");
+    schedule(cgfunc, 0.5f, kRepeatForever, 0.f, "dsfsdf");
 
     return true;
 }
