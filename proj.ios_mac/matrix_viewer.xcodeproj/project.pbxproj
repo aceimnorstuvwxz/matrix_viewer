@@ -62,6 +62,10 @@
 		B504A7E41B45685F00B3324C /* 3d in Resources */ = {isa = PBXBuildFile; fileRef = B504A7E21B45685F00B3324C /* 3d */; };
 		B504A7E71B456E7100B3324C /* PreviewScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B504A7E51B456E7100B3324C /* PreviewScene.cpp */; };
 		B504A7E81B456E7100B3324C /* PreviewScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B504A7E51B456E7100B3324C /* PreviewScene.cpp */; };
+		B54B62A31B45C93E00A25336 /* ShadowPlane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B54B62A11B45C93E00A25336 /* ShadowPlane.cpp */; };
+		B54B62A41B45C93E00A25336 /* ShadowPlane.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B54B62A11B45C93E00A25336 /* ShadowPlane.cpp */; };
+		B54B62AA1B45E63000A25336 /* RenderTextureTestScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B54B62A81B45E63000A25336 /* RenderTextureTestScene.cpp */; };
+		B54B62AB1B45E63000A25336 /* RenderTextureTestScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B54B62A81B45E63000A25336 /* RenderTextureTestScene.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -155,6 +159,10 @@
 		B504A7E21B45685F00B3324C /* 3d */ = {isa = PBXFileReference; lastKnownFileType = folder; path = 3d; sourceTree = "<group>"; };
 		B504A7E51B456E7100B3324C /* PreviewScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PreviewScene.cpp; sourceTree = "<group>"; };
 		B504A7E61B456E7100B3324C /* PreviewScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreviewScene.h; sourceTree = "<group>"; };
+		B54B62A11B45C93E00A25336 /* ShadowPlane.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShadowPlane.cpp; sourceTree = "<group>"; };
+		B54B62A21B45C93E00A25336 /* ShadowPlane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowPlane.h; sourceTree = "<group>"; };
+		B54B62A81B45E63000A25336 /* RenderTextureTestScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RenderTextureTestScene.cpp; sourceTree = "<group>"; };
+		B54B62A91B45E63000A25336 /* RenderTextureTestScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenderTextureTestScene.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -297,6 +305,10 @@
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				B504A7E51B456E7100B3324C /* PreviewScene.cpp */,
 				B504A7E61B456E7100B3324C /* PreviewScene.h */,
+				B54B62A11B45C93E00A25336 /* ShadowPlane.cpp */,
+				B54B62A21B45C93E00A25336 /* ShadowPlane.h */,
+				B54B62A81B45E63000A25336 /* RenderTextureTestScene.cpp */,
+				B54B62A91B45E63000A25336 /* RenderTextureTestScene.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -497,8 +509,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B54B62AA1B45E63000A25336 /* RenderTextureTestScene.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				B504A7E71B456E7100B3324C /* PreviewScene.cpp in Sources */,
+				B54B62A31B45C93E00A25336 /* ShadowPlane.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,
@@ -510,7 +524,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				B54B62AB1B45E63000A25336 /* RenderTextureTestScene.cpp in Sources */,
 				B504A7E81B456E7100B3324C /* PreviewScene.cpp in Sources */,
+				B54B62A41B45C93E00A25336 /* ShadowPlane.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

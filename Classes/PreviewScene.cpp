@@ -26,6 +26,15 @@ bool PreviewScene::init()
     _3dCamera->setCameraMask((unsigned short)CameraFlag::USER1);
     _3dLayer->addChild(_3dCamera);
 
+    auto layer2 = Layer::create();
+    this->addChild(layer2);
+    auto  camer2 =Camera::createPerspective(60, size.width/size.height, 1, 1000);
+    camer2->setPosition3D({10, 10, 10});
+    camer2->lookAt({0,0,0});
+    camer2->setCameraFlag(CameraFlag::USER1);
+    camer2->setCameraMask((unsigned short)CameraFlag::USER1);
+    layer2->addChild(camer2);
+
     // Main Mesh
     _mainSprite = Sprite3D::create("3d/simple.c3b");
     _mainSprite->setPosition3D({0,0,0});
@@ -33,12 +42,24 @@ bool PreviewScene::init()
 //    _mainSprite->setScale(0.3);
     _3dLayer->addChild(_mainSprite);
 
+    auto sp = Sprite::create("HelloWorld.png");
+    sp->setPosition(size.width/2, size.height/2);
+    _3dLayer->addChild(sp);
+
     // Bottom Plane
     _plane = Sprite3D::create("3d/pure_plane.c3b");
-    _plane->setPosition3D({0, -5, 0});
+    _plane->setPosition3D({0, -8, 0});
     _plane->setScale(20);
     _plane->setCameraMask(_3dCamera->getCameraMask());
     _3dLayer->addChild(_plane);
+
+    // Shadow
+    _shadowPlane = ShadowPlane::create();
+    _shadowPlane->setPosition3D({0, -7, 0});
+    _shadowPlane->setScale(10);
+    _shadowPlane->setCameraMask(camer2->getCameraMask());
+    layer2->addChild(_shadowPlane);
+    _shadowPlane->setShadowTarget(sp);
 
     // Animation
     _mainSprite->runAction(RepeatForever::create(RotateBy::create(20.f, {0,360,0})));
@@ -60,7 +81,7 @@ bool PreviewScene::init()
             _cg = 0;
         }
     };
-    schedule(cgfunc, 0.5f, kRepeatForever, 0.f, "dsfsdf");
+    schedule(cgfunc, 0.1f, kRepeatForever, 0.f, "dsfsdf");
 
     return true;
 }
