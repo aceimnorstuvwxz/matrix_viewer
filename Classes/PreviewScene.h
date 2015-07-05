@@ -10,7 +10,6 @@
 #define __matrix_viewer__PreviewScene__
 
 #include "cocos2d.h"
-#include "ShadowPlane.h"
 
 class PreviewScene: public cocos2d::Scene
 {
@@ -25,7 +24,6 @@ private:
     cocos2d::Camera* _3dCamera;
     cocos2d::Sprite3D* _mainSprite;
     cocos2d::Sprite3D* _plane;
-    ShadowPlane* _shadowPlane;
 
 
     int _cg = 0;

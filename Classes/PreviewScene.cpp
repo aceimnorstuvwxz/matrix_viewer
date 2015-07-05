@@ -42,24 +42,12 @@ bool PreviewScene::init()
 //    _mainSprite->setScale(0.3);
     _3dLayer->addChild(_mainSprite);
 
-    auto sp = Sprite::create("HelloWorld.png");
-    sp->setPosition(size.width/2, size.height/2);
-    _3dLayer->addChild(sp);
-
     // Bottom Plane
     _plane = Sprite3D::create("3d/pure_plane.c3b");
     _plane->setPosition3D({0, -8, 0});
     _plane->setScale(20);
     _plane->setCameraMask(_3dCamera->getCameraMask());
     _3dLayer->addChild(_plane);
-
-    // Shadow
-    _shadowPlane = ShadowPlane::create();
-    _shadowPlane->setPosition3D({0, -7, 0});
-    _shadowPlane->setScale(10);
-    _shadowPlane->setCameraMask(camer2->getCameraMask());
-    layer2->addChild(_shadowPlane);
-    _shadowPlane->setShadowTarget(sp);
 
     // Animation
     _mainSprite->runAction(RepeatForever::create(RotateBy::create(20.f, {0,360,0})));
